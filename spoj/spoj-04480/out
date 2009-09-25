@@ -1,0 +1,456 @@
+checking: 'branimir' and 'vladimir'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'kruz'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'branimir' and 'bred'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'pit'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'branimir' and 'zemlja'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'nije'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'ravna'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'ploca'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'ko'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'je'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'zapalio'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'branimir' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'vladimir' and 'tom'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'kruz'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'vladimir' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'vladimir' and 'zemlja'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'vladimir' and 'nije'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'ravna'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'ploca'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'vladimir' and 'zapalio'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'vladimir' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'kruz' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'bred' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'tom' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zemlja' and 'tom'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'nije' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ravna' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ploca' and 'tom'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'tom' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'tom' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'tom'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zito' and 'tom'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'kruz' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'kruz' and 'pit'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'zemlja' and 'kruz'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'kruz' and 'nije'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'ravna' and 'kruz'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ploca' and 'kruz'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'kruz' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'kruz' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'kruz'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'kruz' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'bred' and 'pit'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'zemlja' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'bred' and 'nije'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ravna' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ploca' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'bred' and 'ko'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'bred' and 'je'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'zapalio' and 'bred'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'bred' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'zemlja' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'nije' and 'pit'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ravna' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ploca' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'pit' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'pit' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zito' and 'pit'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zemlja' and 'nije'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zemlja' and 'ravna'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zemlja' and 'ploca'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zemlja' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zemlja' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zapalio' and 'zemlja'
+	a < b ?1
+   a_rev < b_rev ? 0
+ dislike?: 1
+
+checking: 'zemlja' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ravna' and 'nije'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ploca' and 'nije'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'nije' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'nije' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zapalio' and 'nije'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'nije' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ravna' and 'ploca'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'ravna' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ravna' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zapalio' and 'ravna'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'ravna' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ploca' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'ploca' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zapalio' and 'ploca'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'ploca' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+checking: 'ko' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 1
+ dislike?: 1
+
+checking: 'zito' and 'ko'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zito' and 'je'
+	a < b ?0
+   a_rev < b_rev ? 0
+ dislike?: 0
+
+checking: 'zapalio' and 'zito'
+	a < b ?1
+   a_rev < b_rev ? 1
+ dislike?: 0
+
+49
