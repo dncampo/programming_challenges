@@ -1,0 +1,23 @@
+n_tels: 3
+tel: 911
+	and size: 3
+tel: 97625999
+	and size: 8
+tel: 91125426
+	and size: 8
+comparing: 91125426
+ and 91125426
+
+NO
+n_tels: 5
+tel: 113
+	and size: 3
+tel: 12340
+	and size: 5
+tel: 123440
+	and size: 6
+tel: 12345
+	and size: 5
+tel: 98346	and size: 4
+comparing: 98346 and 98346
+NO
