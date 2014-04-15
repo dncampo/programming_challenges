@@ -1,0 +1,294 @@
+\input{preambulo}
+
+\begin{document}
+
+
+\section*{Gu\'ia Pr\'actica 4 -- Complejidad}
+
+\begin{enumerate}
+	\item Mostrar usando la definición de $\mathcal{O}()$ tomada de \footnote{Marzal y Gracia. Introducción al análisis de algoritmos.} \footnote{\href{https://arco.esi.uclm.es/public/mirror/Introducci\%C3\%B3n\%20al\%20an\%C3\%A1lisis\%20de\%20algoritmos.pdf}{https://arco.esi.uclm.es/public/mirror/Introducci\%C3\%B3n\%20al\%20an\%C3\%A1lisis\%20de\%20algoritmos.pdf}} : \\
+	\vspace*{-7mm}
+	\begin{center}
+		$\mathcal{O}(f(n)) = $ \{ $t: \mathbb{N} \rightarrow \mathbb{R}^+$ $|$  $\exists c \in \mathbb{R}^+, 
+		\exists n_0 \in \mathbb{N} : \forall n \geq n_0$  $\Rightarrow$   $t(n) \leq c f(n)$ \}.
+	\end{center}
+	
+		\begin{enumerate}[a)]
+			\item $50n-8 \in \mathcal{O}(n)$ 
+			\item $5n^2-3n + 6 \in \mathcal{O}(n^2)$
+			\item $2^n + 7n + 3 \in \mathcal{O}(2^n)$ 			
+		\end{enumerate}
+		
+	\item Determinar $\mathcal{O}()$ y $\Omega()$ de las siguientes funciones:
+		\begin{enumerate}[a)]
+			\item $5n^2$ 
+			\item $3n^2 + 2n$ 			
+			\item $3^n + 2^n$ 
+			\item $n + \log_2(n)$ 			
+			\item $n^2 + \log_2(n)$ 			
+		\end{enumerate}	
+		
+	\item Determinar $\Theta()$ de las siguientes funciones:
+		\begin{enumerate}[a)]
+			\item $n^2 + 2n$ 
+			\item $t(n) = \twopartdef { 2n + 4 } {$ n  par $} {7n^2 + n} {$n impar$}$
+			\item $t(n) = \twopartdef { 4n + 5 } {$ n  par $} {5n + n} {$n impar$}$
+		\end{enumerate}	
+		
+	\item Reescribir los siguientes órdenes de complejidad de menor a mayor ($<$):\\
+	$\mathcal{O}(n), \mathcal{O}(n\log n), \mathcal{O}(n!), \mathcal{O}(n^2), \mathcal{O}(5),
+	\mathcal{O}(\log\log n), \mathcal{O}(3^n), \mathcal{O}(\sqrt{n}), \mathcal{O}(n^n),$ \\
+	 $\mathcal{O}(n^3), \mathcal{O}(2^n), \mathcal{O}(\log n)$. 
+	 
+	 Etiquete cada $\mathcal{O}$ como
+	 \textbf{sublineal}, \textbf{lineal} o \textbf{superlineal}. Dentro de éstas últimas puede
+	 decir cuáles son \textbf{polinómicas} (cuadráticas, cúbicas, etc.) o \textbf{exponenciales}.
+		
+		
+	\item Para cada uno de los fragmentos de código siguientes:
+	\vspace{-3mm}
+	\begin{itemize}
+		\item Diga qué $ \mathcal{O}()$ poseen.
+		\item Impleméntelos y dé el tiempo de ejecución para $\neq$ valores de $n$.
+		\item Compare estimación teórica (primer ítem) con tiempos reales (segundo ítem).
+	\end{itemize}
+	
+\newpage
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H] %1
+\dontprintsemicolon
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	$sum \gets sum + 1$
+}
+\caption{{ } }
+ \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm} %2
+\null
+ \begin{algorithm}[H]
+\dontprintsemicolon
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $n$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} } 
+  \end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\dontprintsemicolon %3
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $n^2$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} } 
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\dontprintsemicolon%4
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $i$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\dontprintsemicolon %5
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $i^2$} {
+		\For{$k \gets 1$ \textbf{to} $j$} {
+			$sum \gets sum + 1$
+		}
+	}
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\dontprintsemicolon %6
+$i \gets 1$\;
+\While{$i \leq n$} {
+	$j \gets 1$\;
+	\While {$j \leq n$} {
+		$j \gets j*2$
+	}
+	$i \gets i + 1$
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\dontprintsemicolon %7
+$i \gets 1$\;
+\While{$i \leq n$} {
+	$j \gets 1$\;
+	\While {$j \leq i$} {
+		$j \gets j+1$
+	}
+	$i \gets i + 1$
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\dontprintsemicolon %8
+$i \gets 1$\;
+\While{$i \leq 10$} {
+	$j \gets 1$\;
+	\While {$j \leq 10$} {
+		$j \gets j+1$
+	}
+	$i \gets i + 2$
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+\newpage
+%%%%%
+
+	\item ¿Cuál es el propósito de los siguientes algoritmos? Analizar el tiempo de
+	ejecución en el peor caso y expresarlos en notación $\mathcal{O}$.
+		
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\dontprintsemicolon %1
+\KwIn{$a, n$: \textbf{integer}}
+\KwOut{b}
+$b$: \textbf{long integer}\;
+$b \gets 1$\;
+\For{$k \gets 0$ \textbf{to} $k < n$} {
+$b \gets b*a$
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\dontprintsemicolon %2
+\KwIn{$a, n$: \textbf{integers}}
+\KwOut{b}
+$b$: \textbf{long integer}\;
+$c$: \textbf{long integer}\;
+$b \gets 1$\;
+$c \gets a$\;
+\For{$k \gets n$ \textbf{to} $k > 0$} {
+  \If{$k$ \textbf{mod} 2 == $0$} {
+	$k \gets k / 2$\;
+	$c \gets c*c$\;
+  }
+  \Else{
+	$k \gets k -1$\;
+	$b \gets b*c$\;
+  }
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+\vspace{15mm}		
+		
+		
+		\item A partir de una secuencia de números $A$, calcular otra $B$ tal que cada uno
+		de sus elementos $B_i$ sea el promedio de todos los anteriores en la secuencia
+		original, incluído el $i-ésimo$.\\
+		Ejemplo:\\
+		$A = [1, 3, 5, 4, 2, 1]$\\
+		$B = [1, 2, 3, 3.25, 3, 2.66]$
+		
+		
+		\item Un arreglo $A$ contiene $n-1$ enteros \textbf{únicos} $\in [0, n-1]$; es decir, 
+		hay un número de este intervalo que no está en $A$. Escriba un algoritmo para encontrar
+		ese número faltante en $\mathcal{O}(n)$. Sólo es posible utilizar $\mathcal{O}(1)$ espacio
+		adicional además del arreglo $A$ mismo.\\
+		Ejemplo:\\
+		$N = 5$. El arreglo puede contener elementos (no repetidos) $\in [0, 4]$.\\
+		Si el vector $=[1, 4, 2, 0]$, entonces el elemento que falta es \textbf{3}.
+		
+
+		\item Suponga que cada renglón de un arreglo $A_{n,n}$ posee valores $0$ y $1$ de tal
+		manera que en cualquier renglón de $A$ todos los $1$'s van antes que los $0$'s. Describa
+		un método de $\mathcal{O}(n)$ para determinar el renglón de $A$ que contenga la
+		mayor cantidad de 1's.\\\\
+		Ejemplo:
+		\begin{flushleft}
+  \begin{tabular}{|| c | c | c | c | c ||}
+    \hline\hline
+    1 & 1 & 0 & 0 & 0 \\ \hline
+    1 & 1 & 1 & 0 & 0 \\ \hline
+    \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{0} \\ \hline
+    1 & 0 & 0 & 0 & 0 \\ \hline
+    1 & 1 & 1 & 0 & 0 \\ \hline
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+
+	\item Para cada solución que tenga de los problemas de las guías anteriores, comente, si es posible, el $\mathcal{O}()$ de
+	su solución. Si no es posible (por ejemplo talla indeterminada del problema, o caminos de ejecución no determinísticos) explique
+	por qué. Para los problemas que no tenga resuelto, trate de proponer un algoritmo (al menos en forma coloquial) y vea
+	si puede determinar el $\mathcal{O}()$ de su propuesta.
+	
+	\item Realice algoritmos (no es necesario implementarlos, suficiente con pseudocódigo claro) para:
+		\begin{enumerate}[a)] 
+			\item \textbf{Sumar} $N \in \mathbb{N}$ y  $M \in \mathbb{N}$ tales que $n$ y $m$ representan la cantidad de dígitos cada uno. Piense que el número
+			de dígitos puede ser muy grande.
+			\item \textbf{Multiplicar} $N \in \mathbb{N}$ y  $M \in \mathbb{N}$ tales que $n$ y $m$ representan la cantidad de dígitos cada uno. Piense que el número
+			de dígitos puede ser muy grande.
+			\item \textbf{Multiplicar} las \textbf{matrices} $A_{m,n}$ y $B_{n,q}$.
+			
+			\item[] \underline{\textbf{NOTA}}: En todos los casos exprese el $\mathcal{O}$() de su algoritmo.
+		\end{enumerate}
+	
+	\item Resolver en lenguage C++ y obtener \textbf{ACCEPTED} en los jueces correspondientes para los siguientes problemas:	
+	
+	\begin{enumerate}[a)]
+		\item Integer Inquiry  -- \href{http://uva.onlinejudge.org/external/4/424.html}{http://uva.onlinejudge.org/external/4/424.html}
+		\item 500!  -- \href{http://uva.onlinejudge.org/external/6/623.html}{http://uva.onlinejudge.org/external/6/623.html}
+		\item Overflow -- \href{http://uva.onlinejudge.org/external/4/465.html}{http://uva.onlinejudge.org/external/4/465.html} 
+		
+		\item[] \underline{\textbf{NOTA}}: En todos los casos exprese el $\mathcal{O}$() de su algoritmo.
+	\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
