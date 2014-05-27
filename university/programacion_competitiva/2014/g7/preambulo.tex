@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper,twoside,spanish]{report}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{graphicx, subfigure}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm,top=3.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{sectsty}\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont}
+\setcounter{secnumdepth}{5}
+\usepackage{ccaption}
+   \captionnamefont{\bfseries\small}
+   \captiontitlefont{\small}
+   \captiondelim{\hspace{1em}}
+   \hangcaption
+\usepackage{multirow}
+%\usepackage{longtable,ltcaption}
+\usepackage{pdfpages} % to import PDF pages
+
+
+\usepackage{relsize}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{color}
+%\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage[ruled, noend]{algorithm2e}
+%\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+
+\usepackage{listings}
+\definecolor{backgroundcode}{rgb}{0.95,0.95,0.95}
+
+
+%referencias de la pagina
+\usepackage{hyperref}
+
+%% propiedades del pdf
+\hypersetup{
+    pdfstartview={FitH},  
+    pdftitle={Gu\'ia pr\'actica $7$ - $\the\year$},
+    pdfauthor={David N. Campo - Daniel Ambort},     
+    pdfsubject={Gu\'ia pr\'actica $7$ - Programaci\'on Competitiva \the\year  -- Grafos II},
+    pdfcreator={David N. Campo},   
+    pdfproducer={David N. Campo}, 
+    pdfkeywords={algorithms, c++, acm icpc, UVa, SPOJ, programming}, 
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue,
+}
+
+% Estilo de página %%%%%%%%%%%%%%%%%%%%
+\fancyhead{}
+\fancyhead[LO,RE]{\vfill{\footnotesize Programaci\'on Competitiva \the\year - Gu\'ia pr\'actica 7 -- Grafos II}}
+\fancyhead[RO,LE]{\includegraphics[scale=0.15]{img/logo_UTN_color.pdf}}
+
+\fancyfoot{}
+\fancyfoot[RO]{\hfill\includegraphics[scale=0.9]{img/footlineR.pdf}\newline\footnotesize Página \textbf{\thepage}}
+\fancyfoot[LE]{\includegraphics[scale=0.9]{img/footlineL.pdf}\newline\footnotesize Página \textbf{\thepage}}
+
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+   \fancyhead{}
+	\fancyhead[LO,RE]{\vfill{\footnotesize Programaci\'on Competitiva \the\year - Gu\'ia pr\'actica 7 -- Grafos II}}
+   \fancyhead[RO,LE]{\includegraphics[scale=0.15]{img/logo_UTN_color.pdf}}
+}   
+
+\newpage\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{si } #2 \\
+			#3 & \mbox{si } #4
+		\end{array}
+	\right.
+}
