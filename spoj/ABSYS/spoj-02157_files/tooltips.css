@@ -1,0 +1,50 @@
+
+/* context help message */
+.cxitem {
+        display: none;
+}
+
+/* tooltip */
+#tooltip {
+        margin:0;
+        padding:0;
+        width:350px;
+        background:#F8F8F8;
+        border:1px solid #d2d2d2;
+        line-height:130%;
+        opacity: 0.95;
+        position: absolute;
+        z-index: 3000;
+}
+#tooltip2 {
+        background:#F8F8F8;
+        border:1px solid #d2d2d2;
+        opacity: 0.95;
+        position: absolute;
+        z-index: 3000;
+}
+#tooltip2 div {
+        padding: 3px;
+}
+#tooltip div {
+        margin-bottom: 10px;
+        padding:3px;
+}
+#tooltip div.cxtitle, #tooltip2 div.cxtitle{
+        background-color: #000080;
+        color: #F4F4F4;
+        font-weight: bold
+}
+
+/* context help link */
+a.cxhelp {
+        background-color: #489857;
+        color: #F0F0F0;
+        font-weight: bold;
+        text-decoration: none;
+}
+a.cxhelp:HOVER {
+        color: white;
+        background-color: green;
+}
+
