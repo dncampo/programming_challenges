@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<title>Sphere Online Judge (SPOJ)  - Problem AE1B</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" id="metatag">
+<meta name="Keywords" content="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="https://www.spoj.pl/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="https://www.spoj.pl/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="spoj-04301_files/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="spoj-04301_files/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<script type="text/javascript" src="spoj-04301_files/jquery_002.js"></script>
+<style type="text/css">
+<!--
+.maintable {width: 755px;} 
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+</head><body>
+<center>
+<table class="maintable" id="maintable" cellpadding="10" cellspacing="0">
+<tbody><tr>
+    <td colspan="2" class="header">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+		<td class="headerleft">
+		</td><td class="headercenter">
+<h1><img alt="Sphere Online Judge" title="Sphere Online Judge" src="spoj-04301_files/sphere-spoj-small.png" style="margin-top: -4px; margin-bottom: -4px;" border="0"></h1>
+		</td>
+		<td class="headerright">
+	</td></tr>
+	</tbody></table>
+    </td>
+</tr>
+<tr><td class="menu" valign="top" width="92">
+
+
+<div class="menucmd"><a href="https://www.spoj.pl/logout"><b style="font-weight: normal;">Log Out</b></a><br><b style="font-weight: normal; margin-right: -100px;">dncampo</b><br><hr><a href="https://www.spoj.pl/myaccount">my account</a><br><a href="https://www.spoj.pl/tutorials">tutorials</a><br><br><a href="https://www.spoj.pl/status">status</a><br><a href="https://www.spoj.pl/submit">submit</a><br><a href="https://www.spoj.pl/problems/classical/">problems</a><br><a href="https://www.spoj.pl/search">search</a><br><br><a href="https://www.spoj.pl/">news</a><br><a href="https://www.spoj.pl/contests">contests</a><br><a href="https://www.spoj.pl/ranks/">ranks</a><br><br><a href="https://www.spoj.pl/forum">forum</a><br><a href="https://www.spoj.pl/comments">comments</a><br><a href="https://www.spoj.pl/credits">credits</a><br><hr></div><a href="https://www.spoj.pl/problems/classical/"></a><br>
+
+	<div class="time">
+Server time:</div>
+<div class="time">
+2009-09-02
+<br>
+<b>16 : 06 : 48</b>
+</div>
+
+</td>
+<td style="padding: 0px;" class="content0" valign="top">
+        <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+                <td style="padding: 0px;" colspan="2"><center>
+                                
+                </center></td>
+        </tr>
+        <tr>
+                <td class="content" style="padding: 10px;" width="99%">
+	<script type="text/javascript" src="spoj-04301_files/jquery_003.js"></script>
+<script type="text/javascript" src="spoj-04301_files/jquery.js"></script>
+<script type="text/javascript" src="spoj-04301_files/jquery_004.js"></script>
+
+
+	 <!-- wykorzystywane w pcontent.html (by wiele) -->
+	
+	<table class="problems" width="100%">
+	<tbody><tr class="navigation">
+			<td><a href="https://www.spoj.pl/submit/AE1B/">Submit</a></td>
+			<td><a href="https://www.spoj.pl/status/AE1B,dncampo/">My submissions</a></td>
+		<td><a href="https://www.spoj.pl/status/AE1B/">All submissions</a></td>
+	<td><a href="https://www.spoj.pl/ranks/AE1B/">Best solutions</a></td>
+	<td><a href="https://www.spoj.pl/problems/AE1B.ps">PS</a></td>
+	<td><a href="https://www.spoj.pl/problems/AE1B.pdf">PDF</a></td>
+	<td><a href="https://www.spoj.pl/problems/classical/">Back to list</a></td>
+	</tr>
+	</tbody></table>
+
+	<div class="prob">
+
+
+	<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+<table style="margin-top: 10px;" width="100%">
+<tbody><tr>
+	<td>
+		<h2>SPOJ Problem Set (classical)</h2>
+		<h1>4301. Tables</h1>
+		<h2>Problem code: AE1B</h2>
+	</td>
+	</tr>
+</tbody></table>
+
+<p align="justify">
+</p><p>
+  Byteman works as a carpenter.
+  He has just received an order for s pine-wood tables.
+  Although he has plenty of pine-wood boards in his workshop, he has just
+  run out of screws.
+  Therefore he needs to walk to the warehouse and bring back some boxes
+  with screws.
+  What is the minimum number of boxes that he needs to bring in order
+  to have enough screws to make the tables?
+</p>
+    <h2>Input</h2>
+<p>
+    The first line of the standard input contains three integers
+    n, k, and s (1 &#8804; n, k, s &#8804; 1000) separated with single
+    spaces.
+    They denote the number of boxes with screws in Byteman's warehouse,
+    the number of screws needed to make a table and the number of tables
+    to be made by Byteman, respectively.
+    The second line contains n (not necessarily different)
+    integers a<sub>i</sub> (1 &#8804; a<sub>i</sub> &#8804; 1000)
+    separated with single spaces, such that a<sub>i</sub> is the number of screws
+    in the i<sup>th</sup> box in the warehouse.
+    </p>
+
+	
+    <h2>Output</h2>
+    <p>
+    The first and only line of the standard output should contain a single integer
+    - the minimal number of boxes with screws that Byteman needs to bring
+    from his warehouse in order to make s tables.
+    You may assume that Byteman has enough screws in the warehouse to
+    make all tables.
+</p>
+
+<h2>Example</h2>
+
+<p>For the input data:</p><pre>5 6 3
+3 9 5 7 3</pre>
+
+<p>the correct result is:</p><pre>3</pre>
+
+<p>
+  <b>Explanation of the example.</b>
+  To make three tables, each of which requires six screws, Byteman has to
+  bring three boxes with screws from the warehouse.
+  These can be either the ones containing 3, 7 and 9 screws,
+  or the ones with 9, 5 and 7 screws.
+</p>
+<p><i>Task author: Jakub Lacki.</i></p>
+
+<hr>
+<table style="margin-bottom: 10px;" class="probleminfo" align="left" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td>Added by:</td><td><a href="https://www.spoj.pl/users/racer">Race with time</a></td></tr>
+<tr><td>Date:</td><td>2009-05-03</td></tr>
+<tr><td>Time limit:</td><td>1s
+</td></tr>
+<tr><td>Source limit:</td><td>50000B</td></tr>
+<tr><td>Languages:</td><td>All </td></tr>
+<tr><td>Resource:</td><td>Algorithmic Engagements 2009</td></tr>
+	
+</tbody></table>
+	<div id="ccontent">
+	
+<hr style="clear: both;">
+<a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a><br>
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+		<tbody><tr>
+		<td colspan="2">
+				</td>
+	</tr>
+	
+	<script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script>
+	
+
+			
+	<tr>
+		<td colspan="2" class="comm comm_odd">
+		<font>
+		2009-08-03 20:02:59 <b><a href="https://www.spoj.pl/users/bbi5291">Brian</a></b> 
+		</font>
+								<br>
+The regular judge is not that picky. In fact, you can often get AC even
+if you print a space instead of a newline. Trailing newlines should not
+pose any problem. </td>
+	</tr>
+				
+	<tr>
+		<td colspan="2" class="comm comm_even">
+		<font>
+		2009-07-31 20:23:07 <b><a href="https://www.spoj.pl/users/mido22">mohamed maher</a></b> 
+		</font>
+								<br>
+				i will make \n or not
+						</td>
+	</tr>
+				
+	<tr>
+		<td colspan="2" class="comm comm_odd">
+		<font>
+		2009-07-30 20:49:21 <b><a href="https://www.spoj.pl/users/dr3w">Drew Saltarelli</a></b> 
+		</font>
+								<br>
+				huh? \n worked fine for me
+						</td>
+	</tr>
+				
+	<tr>
+		<td colspan="2" class="comm comm_even">
+		<font>
+		2009-07-12 19:55:54 <b><a href="https://www.spoj.pl/users/ashokvardhan">Ashok vardhan</a></b> 
+		</font>
+								<br>
+				Friends please don't print '\n'...!!!! Because of that i got WA 10 times.....!!!!
+						</td>
+	</tr>
+			
+</tbody></table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+	</div>
+	<table width="100%">
+                <tbody><tr>
+                <td colspan="2" height="20"></td>
+        </tr>
+        <form method="post" action="/comment/AE1B/add/"></form>
+        <tr> <td style="padding-left: 5px;" colspan="2">Leave a Comment</td> </tr>
+        <tr>
+                <td valign="top"></td>
+                <td><textarea name="content" cols="40" rows="3"></textarea></td>
+        </tr>
+                <tr>
+                <td colspan="2" style="padding-left: 5px;">
+                        <input value="Publish" type="submit">
+                        <input name="pcode" value="AE1B" type="hidden">
+                </td>
+        </tr>
+<tr>
+<td colspan="2" class="smallgrey" style="padding-left: 5px;">
+Notes:
+<br>1. Don't post any source code here.
+<br>2. Please be careful, leave short comments only. Don't spam here.
+<br>3. For more discussion (hints, ideas, solutions) please visit our <a href="https://www.spoj.pl/forum">forum</a>.
+<br>4. Authors are allowed to delete the post and use html code here (e.g. to provide some useful links).
+</td>
+</tr>
+        
+        </tbody></table>
+
+	</div>
+        </td>
+</tr><tr>
+        <td style="padding: 0px;" colspan="2"><center>
+                
+</center></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="footer">
+
+<script language="javascript" type="text/javascript">
+<!--
+function swapSheet(sheet, caller) {
+    document.getElementById('theme').href=sheet;
+    document.cookie="css_0="+sheet+"; path=/;";
+    caller.href="#bottom";
+}
+
+function setWidth(w, caller) {
+    document.getElementById('maintable').style.width=w;
+    document.cookie="res="+w+"; path=/;";
+    caller.href="#bottom";
+}
+//-->
+
+</script>
+        <table width="100%">
+    <tbody><tr>
+	<td class="cfooter" align="left" width="10%">
+	<a href="https://www.spoj.pl/info/">About SPOJ</a>
+	</td>
+	<td class="cfooter" align="center">
+	    page size:
+	    <a href="https://www.spoj.pl/?rsl=755px" onclick="setWidth('755px', this)">800x600</a>
+	    <a href="https://www.spoj.pl/?rsl=980px" onclick="setWidth('980px', this)">1024x768</a>
+	    <a href="https://www.spoj.pl/?rsl=100%" onclick="setWidth('100%', this)">Full</a>
+	    &nbsp;&nbsp;
+	    theme:
+	    <a href="https://www.spoj.pl/?css=/themes/skin1.css" onclick="swapSheet('/themes/skin1.css', this)">olive</a>
+	    <a href="https://www.spoj.pl/?css=/themes/skin2.css" onclick="swapSheet('/themes/skin2.css', this)">banana</a>
+	    <a href="https://www.spoj.pl/?css=/themes/skin3.css" onclick="swapSheet('/themes/skin3.css', this)">plum</a>
+	</td>
+		<td class="cfooter" align="center">
+		 <span title="The discussion channel of the Sphere Online Judge community.">
+		 <a href="irc://irc.freenode.net/spoj"><b>#spoj</b> at freenode</a>
+		 </span>
+	</td>
+		<td class="cfooter" style="text-align: right;" width="10%">
+		<a href="https://www.spoj.pl/rss/"><img src="spoj-04301_files/rss10x10.gif" border="0">&nbsp;RSS</a>&nbsp;
+	
+	</td>
+    </tr>
+    </tbody></table>
+    </td></tr></tbody></table>
+</center>
+<div style="font-size: 10px; margin-top: 4px; color: rgb(85, 80, 95);"><center>
+<a href="http://www.spoj.pl/" style="color: black;">SPOJ</a>
+System &#169; 2008-2009
+<a href="http://sphere-research.com/" style="color: black;">Sphere Research Labs</a>. 
+All Rights Reserved.</center></div>
+</body></html>
