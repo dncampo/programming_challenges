@@ -1,0 +1,443 @@
+\input{../preambulo}
+
+\begin{document}
+
+
+\section*{Gu\'ia Pr\'actica 4 -- Complejidad}
+
+\begin{enumerate}
+	\item Mostrar usando la definición de $\mathcal{O}()$ tomada de \footnote{Marzal y Gracia. Introducción al análisis de algoritmos.} \footnote{\href{https://arco.esi.uclm.es/public/mirror/Introducci\%C3\%B3n\%20al\%20an\%C3\%A1lisis\%20de\%20algoritmos.pdf}{https://arco.esi.uclm.es/public/mirror/Introducci\%C3\%B3n\%20al\%20an\%C3\%A1lisis\%20de\%20algoritmos.pdf}} : \\
+	\vspace*{-7mm}
+	\begin{center}
+		$\mathcal{O}(f(n)) = $ \{ $t: \mathbb{N} \rightarrow \mathbb{R}^+$ $|$  $\exists c \in \mathbb{R}^+, 
+		\exists n_0 \in \mathbb{N} : \forall n \geq n_0$  $\Rightarrow$   $t(n) \leq c f(n)$ \}.
+	\end{center}
+	
+		\begin{enumerate}[a)]
+			\item $t(n) = 50n-8 \in \mathcal{O}(n)$ 
+			\item $t(n) = 5n^2-3n + 6 \in \mathcal{O}(n^2)$
+			\item $t(n) = 2^n + 7n + 3 \in \mathcal{O}(2^n)$ 			
+		\end{enumerate}
+		
+	\item Determinar $\mathcal{O}()$ y $\Omega()$ de las siguientes funciones:
+		\begin{enumerate}[a)]
+			\item $t(n) = 5n^2$ 
+			\item $t(n) = 3n^2 + 2n$ 			
+			\item $t(n) = 3^n + 2^n$ 
+			\item $t(n) = n + \log_2(n)$ 			
+			\item $t(n) = n^2 + \log_2(n)$ 			
+		\end{enumerate}	
+		
+	\item Determinar $\Theta()$ de las siguientes funciones:
+		\begin{enumerate}[a)]
+			\item $t(n)=n^2 + 2n$ 
+			\item \begin{equation*}
+    t(n) = \begin{cases}
+               2n + 4               & $n $ par\\
+               7n^2 + n               & $n $ impar\\
+           \end{cases}
+		\end{equation*}
+			\item \begin{equation*}
+    t(n) = \begin{cases}
+               4n + 5               & $n $ par\\
+               5n + 0.5n               & $n $ impar\\
+           \end{cases}
+		\end{equation*}
+
+%			\item $t(n) = \twopartdef { 4n + 5 } {$ n  par $} {5n + n} {$n impar$}$
+		\end{enumerate}	
+		
+	\item Reescribir los siguientes órdenes de complejidad de menor a mayor ($<$):\\
+	$\mathcal{O}(n), \mathcal{O}(n\log n), \mathcal{O}(n!), \mathcal{O}(n^2), \mathcal{O}(5),
+	\mathcal{O}(\log\log n), \mathcal{O}(3^n), \mathcal{O}(\sqrt{n}), \mathcal{O}(n^n),$ \\
+	 $\mathcal{O}(n^3), \mathcal{O}(2^n), \mathcal{O}(\log n)$. 
+	 
+	 Etiquete cada $\mathcal{O}$ como
+	 \textbf{sublineal}, \textbf{lineal} o \textbf{superlineal}. Dentro de éstas últimas puede
+	 decir cuáles son \textbf{polinómicas} (cuadráticas, cúbicas, etc.) o \textbf{exponenciales}.
+		
+		
+	\item Para cada uno de los fragmentos de código siguientes:
+	\vspace{-3mm}
+	\begin{itemize}
+		\item Diga qué $ \mathcal{O}()$ poseen.
+		\item Impleméntelos y dé el tiempo de ejecución para $\neq$ valores de $n$.
+		\item Compare estimación teórica (primer ítem) con tiempos reales (segundo ítem).
+	\end{itemize}
+	
+\newpage
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H] %1
+\DontPrintSemicolon
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	$sum \gets sum + 1$
+}
+\caption{{ } }
+ \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm} %2
+\null
+ \begin{algorithm}[H]
+\DontPrintSemicolon
+
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $n$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} } 
+  \end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\DontPrintSemicolon %3
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $n^2$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} } 
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\DontPrintSemicolon%4
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $i$} {
+		$sum \gets sum + 1$
+	}
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\DontPrintSemicolon%5
+$sum \gets 0$\;
+\For{$i \gets 1$ \textbf{to} $n$} {
+	\For{$j \gets 1$ \textbf{to} $i^2$} {
+		\For{$k \gets 1$ \textbf{to} $j$} {
+			$sum \gets sum + 1$
+		}
+	}
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\DontPrintSemicolon %6
+$i \gets 1$\;
+\While{$i \leq n$} {
+	$j \gets 1$\;
+	\While {$j \leq n$} {
+		$j \gets j*2$
+	}
+	$i \gets i + 1$
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+
+\vspace*{15mm}
+
+
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\DontPrintSemicolon %7
+$i \gets 1$\;
+\While{$i \leq n$} {
+	$j \gets 1$\;
+	\While {$j \leq i$} {
+		$j \gets j+1$
+	}
+	$i \gets i + 1$
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\DontPrintSemicolon %8
+$i \gets 1$\;
+\While{$i \leq 10$} {
+	$j \gets 1$\;
+	\While {$j \leq 10$} {
+		$j \gets j+1$
+	}
+	$i \gets i + 2$
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+\newpage
+%%%%%
+
+	\item ¿Cuál es el propósito de los siguientes algoritmos? Analizar el tiempo de
+	ejecución en el peor caso y expresarlos en notación $\mathcal{O}$.
+		
+\begin{minipage}[t]{7cm}
+\null 
+ \begin{algorithm}[H]
+\DontPrintSemicolon %1
+\KwIn{$a, n$: \textbf{integer}}
+\KwOut{b}
+$b$: \textbf{long integer}\;
+$b \gets 1$\;
+\For{$k \gets 0$ \textbf{to} $k < n$} {
+$b \gets b*a$
+}
+\caption{{} }
+  \end{algorithm}
+\end{minipage}%
+\begin{minipage}[t]{7cm}
+\null
+ \begin{algorithm}[H]
+\DontPrintSemicolon
+ %2
+\KwIn{$a, n$: \textbf{integers}}
+\KwOut{b}
+$b$: \textbf{long integer}\;
+$c$: \textbf{long integer}\;
+$b \gets 1$\;
+$c \gets a$\;
+\For{$k \gets n$ \textbf{to} $k > 0$} {
+  \If{$k$ \textbf{mod} 2 == $0$} {
+	$k \gets k / 2$\;
+	$c \gets c*c$\;
+  }
+  \Else{
+	$k \gets k -1$\;
+	$b \gets b*c$\;
+  }
+}
+\caption{{ } }
+\end{algorithm}
+\end{minipage}
+
+\vspace{15mm}	
+\item En cada uno de los siguientes fragmentos de código encontrar el error del algoritmo o completar lo que falta, según corresponda, para que realice la tarea intencionada
+\begin{enumerate}
+%%%%%%%%% 
+	\item Given array of integers, find the number of sorted pairs formed by its elements such that one element in the pair is divisible by the other one.
+
+\textbf{Example}
+
+For \textit{sequence = [1, 3, 2]}, the output should be
+\textit{divisorsPairs(sequence) = 2}.
+
+These pairs are: \textit{(1, 3), (1, 2)}.
+	
+	\begin{lstlisting}[language=C++, frame=single]
+int divisorsPairs(std::vector<int> sequence) {
+
+  int result = 0;
+
+  for (int i = 0; i < sequence.size(); i++) {
+    for (int j = i + 1; j<  sequence.size(); j++) {
+      if (sequence[i] % sequence[j] == 0 && sequence[j] % sequence[i] == 0) {
+        result++;
+      }
+    }
+  }
+
+  return result;
+}
+
+	\end{lstlisting}
+
+%%%%%%%%% 
+
+	\item Identify the largest integer of the given length.
+
+\textbf{Example}
+
+For \textit{n = 2}, the output should be
+\textit{largestNumber(n) = 99}.
+	
+	\begin{lstlisting}[language=C++, frame=single]
+int largestNumber(int n) {
+
+  int res = 0;
+
+  for (int i = 0; i < n; i++) {
+    res = res + 9;
+  }
+
+  return res;
+}
+	\end{lstlisting}
+%%%%%%%%% 
+
+	\item Given array of integers \textit{sequence} and some integer \textit{fixedElement}, output the number of even values in \textit{sequence} before the first occurrence of \textit{fixedElement} or \textit{-1} if \textit{fixedElement} is not contained in sequence.
+	
+\textbf{Example}
+
+For \textit{sequence = [1, 4, 2, 6, 3, 1]} and \textit{fixedElement = 6}, the output should be
+\textit{evenNumbersBeforeFixed(sequence, fixedElement) = 2}.
+	
+	\begin{lstlisting}[language=C++, frame=single]
+int evenNumbersBeforeFixed(std::vector<int> sequence, int fixedElement) {
+
+  int result = 0;
+
+  for (int i = 0; i < sequence.size(); i++) {
+    if ( ... ) { //complete the argument of if
+      result++;
+    }
+    if (sequence[i] == fixedElement) {
+      return result;
+    }
+  }
+
+  return -1;
+}
+	\end{lstlisting}
+
+%%%%%%%%% 
+
+	\item Given an array of integers, find the rightmost round number (it ends with one or more zeroes) in it and output its position in the array (0-based). If there are \textit{no round numbers} in the given array, output \textit{-1}.
+
+\textbf{Example}
+
+    For \textit{inputArray = [0, 5, 10, 15]}, the output should be
+    \textit{rightmostRoundNumber(inputArray)} $= 2$;
+\begin{lstlisting}[language=C++, frame=single]
+int rightmostRoundNumber(std::vector<int> inputArray) {
+
+  int ans = -1;
+  for (int i = 1; i < inputArray.size(); i++) {
+    if (inputArray[i] % 10 == 0) {
+      ans = i;
+    }
+  }
+
+  return ans;
+}
+
+\end{lstlisting}
+
+%%%%%%%%% 
+
+
+	\item Given an array of integers \textit{inputArray} and an integer \textit{maxSum}, for each \textit{i} (\textit{0} $\leq$ \textit{i $<$ length of inputArray}) find the rightmost \textit{j (j < length of inputArray)} such that the sum of all elements between the $i^{th}$ and $j^{th}$ \emph{elements} (both inclusive) is not greater than \textit{maxSum}.
+
+\textbf{Example}
+
+For \textit{inputArray} $= [2, 3, 0, 1, 2]$ and \textit{maxSum} $= 4$, the output should be
+maximalAllowableSubarrays(inputArray, maxSum) $= [0, 3, 4, 4, 4]$.
+
+
+\begin{lstlisting}[language=C++, frame=single]
+std::vector<int> maximalAllowableSubarrays(std::vector<int> inputArray, int maxSum) {
+  std::vector<int> right(inputArray.size());
+  int j = -1;
+  int curSum = 0;
+  for (int i = 0; i < inputArray.size(); i++) {
+    if (i > 0) {
+      curSum -= inputArray[i - 1];
+    }
+    while (j + 1 < inputArray.size() && curSum + inputArray[j + 1] < maxSum) {
+      curSum += inputArray[++j];
+    }
+    right[i] = j;
+  }
+
+  return right;
+}
+\end{lstlisting}
+\end{enumerate}
+
+	
+\vspace{15mm}	
+
+		
+		
+		\item A partir de una secuencia de números $A$, calcular otra $B$ tal que cada uno
+		de sus elementos $B_i$ sea el promedio de todos los anteriores en la secuencia
+		original, incluído el $i-ésimo$.\\
+		Ejemplo:\\
+		$A = [1, 3, 5, 4, 2, 1]$\\
+		$B = [1, 2, 3, 3.25, 3, 2.66]$
+		
+		
+		\item Un arreglo $A$ contiene $n-1$ enteros \textbf{únicos} $\in [0, n-1]$; es decir, 
+		hay un número de este intervalo que no está en $A$. Escriba un algoritmo para encontrar
+		ese número faltante en $\mathcal{O}(n)$. Sólo es posible utilizar $\mathcal{O}(1)$ espacio
+		adicional además del arreglo $A$ mismo.\\
+		Ejemplo:\\
+		$N = 5$. El arreglo puede contener elementos (no repetidos) $\in [0, 4]$.\\
+		Si el vector $=[1, 4, 2, 0]$, entonces el elemento que falta es \textbf{3}.
+		
+
+		\item Suponga que cada renglón de un arreglo $A_{n,n}$ posee valores $0$ y $1$ de tal
+		manera que en cualquier renglón de $A$ todos los $1$'s van antes que los $0$'s. Describa
+		un método de $\mathcal{O}(n)$ para determinar el renglón de $A$ que contenga la
+		mayor cantidad de 1's.\\\\
+		Ejemplo:
+		\begin{flushleft}
+  \begin{tabular}{|| c | c | c | c | c ||}
+    \hline\hline
+    1 & 1 & 0 & 0 & 0 \\ \hline
+    1 & 1 & 1 & 0 & 0 \\ \hline
+    \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{1} & \cellcolor{green!17}\textbf{0} \\ \hline
+    1 & 0 & 0 & 0 & 0 \\ \hline
+    1 & 1 & 1 & 0 & 0 \\ \hline
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+
+	\item Para cada solución que tenga de los problemas de las guías anteriores, comente, si es posible, el $\mathcal{O}()$ de
+	su solución. Si no es posible (por ejemplo talla indeterminada del problema, o caminos de ejecución no determinísticos) explique
+	por qué. Para los problemas que no tenga resuelto, trate de proponer un algoritmo (al menos en forma coloquial) y vea
+	si puede determinar el $\mathcal{O}()$ de su propuesta.
+	
+	\item Realice algoritmos (no es necesario implementarlos, suficiente con pseudocódigo claro) para:
+		\begin{enumerate}[a)] 
+			\item \textbf{Sumar} $N \in \mathbb{N}$ y  $M \in \mathbb{N}$ tales que $n$ y $m$ representan la cantidad de dígitos cada uno. Piense que el número
+			de dígitos puede ser muy grande.
+			\item \textbf{Multiplicar} $N \in \mathbb{N}$ y  $M \in \mathbb{N}$ tales que $n$ y $m$ representan la cantidad de dígitos cada uno. Piense que el número
+			de dígitos puede ser muy grande.
+			\item \textbf{Multiplicar} las \textbf{matrices} $A_{m,n}$ y $B_{n,q}$.
+			
+			\item[] \underline{\textbf{NOTA}}: En todos los casos exprese el $\mathcal{O}$() de su algoritmo.
+		\end{enumerate}
+	
+	\item Resolver en lenguage C++ y obtener \textbf{ACCEPTED} en los jueces correspondientes para los siguientes problemas:	
+	
+	\begin{enumerate}[a)]
+		\item Integer Inquiry  -- \href{http://uva.onlinejudge.org/external/4/424.html}{http://uva.onlinejudge.org/external/4/424.html}
+		\item 500!  -- \href{http://uva.onlinejudge.org/external/6/623.html}{http://uva.onlinejudge.org/external/6/623.html}
+		\item Overflow -- \href{http://uva.onlinejudge.org/external/4/465.html}{http://uva.onlinejudge.org/external/4/465.html} 
+		
+		\item[] \underline{\textbf{NOTA}}: En todos los casos exprese el $\mathcal{O}$() de su algoritmo.
+	\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
