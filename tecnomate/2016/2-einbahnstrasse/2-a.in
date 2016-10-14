@@ -1,0 +1,8 @@
+4 2 5
+NewTroy Midvale Metrodale
+NewTroy   <-20-> Midvale
+Midvale   --50-> Bakerline
+NewTroy    <-5-- Bakerline
+Metrodale <-30-> NewTroy
+Metrodale  --5-> Bakerline
+0 0 0
