@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<title>Sphere Online Judge (SPOJ)  - Problem ARITH2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" id="metatag">
+<meta name="Keywords" content="programming, language, algorithm, spoj, contest, contester, Java, C#, Pascal, C, C++, python, ruby, caml, ocaml, perl, haskell, lisp, prolog, fortran, assembler, asembler, functional, online, judge, problem, problemset, ACM">
+
+<link href="https://www.spoj.pl/gfx/favicon.png" rel="shortcut icon" type="image/x-icon">
+<link href="https://www.spoj.pl/rss/" rel="alternate" type="application/rss+xml" title="RSS Feed">
+<link href="spoj-04452_files/style.css" rel="stylesheet" type="text/css" id="theme">
+<link href="spoj-04452_files/tooltips.css" rel="stylesheet" type="text/css" id="theme">
+<script type="text/javascript" src="spoj-04452_files/jquery_002.js"></script>
+<style type="text/css">
+<!--
+.maintable {width: 755px;} 
+-->
+</style>
+<script type="text/javascript" language="javascript">
+<!--
+function UnCryptMailto(s) {
+	var n=0;
+	var r="";
+	for(var i=0;i<s.length;i++) {		
+		n=s.charCodeAt(i); 
+		if (n>=8364) {n = 128;}
+		r += String.fromCharCode(n+(2));	
+	}
+	return r;
+}
+function linkTo_UnCryptMailto(s)	{
+	location.href=UnCryptMailto(s);
+}
+// -->
+</script>
+
+</head><body>
+<center>
+<table class="maintable" id="maintable" cellpadding="10" cellspacing="0">
+<tbody><tr>
+    <td colspan="2" class="header">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+		<td class="headerleft">
+		</td><td class="headercenter">
+<h1><img alt="Sphere Online Judge" title="Sphere Online Judge" src="spoj-04452_files/sphere-spoj-small.png" style="margin-top: -4px; margin-bottom: -4px;" border="0"></h1>
+		</td>
+		<td class="headerright">
+	</td></tr>
+	</tbody></table>
+    </td>
+</tr>
+<tr><td class="menu" valign="top" width="92">
+
+
+<div class="menucmd"><a href="https://www.spoj.pl/logout"><b style="font-weight: normal;">Log Out</b></a><br><b style="font-weight: normal; margin-right: -100px;">dncampo</b><br><hr><a href="https://www.spoj.pl/myaccount">my account</a><br><a href="https://www.spoj.pl/tutorials">tutorials</a><br><br><a href="https://www.spoj.pl/status">status</a><br><a href="https://www.spoj.pl/submit">submit</a><br><a href="https://www.spoj.pl/problems/classical/sort=0,start=0">problems</a><br><a href="https://www.spoj.pl/search">search</a><br><br><a href="https://www.spoj.pl/">news</a><br><a href="https://www.spoj.pl/contests">contests</a><br><a href="https://www.spoj.pl/ranks/">ranks</a><br><br><a href="https://www.spoj.pl/forum">forum</a><br><a href="https://www.spoj.pl/comments">comments</a><br><a href="https://www.spoj.pl/credits">credits</a><br><hr></div><a href="https://www.spoj.pl/problems/classical/sort=0,start=0"></a><br>
+
+	<div class="time">
+Server time:</div>
+<div class="time">
+2009-09-01
+<br>
+<b>01 : 01 : 03</b>
+</div>
+
+</td>
+<td style="padding: 0px;" class="content0" valign="top">
+        <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+                <td style="padding: 0px;" colspan="2"><center>
+                                
+                </center></td>
+        </tr>
+        <tr>
+                <td class="content" style="padding: 10px;" width="99%">
+	<script type="text/javascript" src="spoj-04452_files/jquery_003.js"></script>
+<script type="text/javascript" src="spoj-04452_files/jquery.js"></script>
+<script type="text/javascript" src="spoj-04452_files/jquery_004.js"></script>
+
+
+	 <!-- wykorzystywane w pcontent.html (by wiele) -->
+	
+	<table class="problems" width="100%">
+	<tbody><tr class="navigation">
+			<td><a href="https://www.spoj.pl/submit/ARITH2/">Submit</a></td>
+			<td><a href="https://www.spoj.pl/status/ARITH2,dncampo/">My submissions</a></td>
+		<td><a href="https://www.spoj.pl/status/ARITH2/">All submissions</a></td>
+	<td><a href="https://www.spoj.pl/ranks/ARITH2/">Best solutions</a></td>
+	<td><a href="https://www.spoj.pl/problems/ARITH2.ps">PS</a></td>
+	<td><a href="https://www.spoj.pl/problems/ARITH2.pdf">PDF</a></td>
+	<td><a href="https://www.spoj.pl/problems/classical/sort=0,start=0">Back to list</a></td>
+	</tr>
+	</tbody></table>
+
+	<div class="prob">
+
+
+	<!-- plik z pomoca kontekstowa (cxhelp_*) dziedziczony po pindex.html -->
+
+
+<table style="margin-top: 10px;" width="100%">
+<tbody><tr>
+	<td>
+		<h2>SPOJ Problem Set (classical)</h2>
+		<h1>4452. Simple Arithmetics II</h1>
+		<h2>Problem code: ARITH2</h2>
+	</td>
+	</tr>
+</tbody></table>
+
+<p align="justify">
+</p><p>While browsing aimlessly, Peter stumbled upon an old riddle he
+used to solve on his calculator when he was still young. It was the
+kind of a riddle where you punch in a bunch of numbers and operators
+into a simple pocket calculator and then turn it upside down to get the
+answer:</p>
+<p><em>These come in many different sizes but they are always exactly one foot long. Answer: 103 * 103 * 5.</em></p>
+<p><em>What are made of ice to keep people warm? Answer: 50 * 40 * 250 + 791. </em></p>
+<p>After a few minutes he found a large amount of such riddles and full
+of excitement he went to solve them. He turned his computer screen
+upside down...</p>
+<p>... only to find out that he does not have a reasonable calculator program installed on his computer.</p>
+<h3>Problem specification</h3>
+<p>You are given multiple sequences of button presses of a simple
+pocket calculator that consist of digits and arithmetic operators. For
+each such sequence find the number it would produce on a pocket
+calculator's display.</p>
+<p>Note that the pocket calculator evaluates the operators in the order
+in which they are given. (i.e., there is no operator precedence.)
+Assume that the display of the calculator is large enough to show the
+result, and that its memory is sufficient to store all intermediate
+results.</p>
+<h3>Input specification</h3>
+<p>The first line of the input file contains an integer T specifying
+the number of test cases. Each test case is preceded by a blank line.</p>
+<p>Each test case represents one sequence of button presses for a
+pocket calculator. The sequence consists of non-negative integers and
+arithmetic operators and ends with an equal sign. It may also contain
+spaces to improve readability.</p>
+<p>The operator / represents integer division, rounded down. You may
+assume that no test case contains division by zero and that in all test
+cases all intermediate results are non-negative.</p>
+<p><em>Tip:</em> <strong>long long int</strong> in C/C++, <strong>long</strong> in Java or <strong>int64</strong> in Pascal is enough for this problem.</p>
+<h3>Output specification</h3>
+<p>For each sequence from the input file output the number that would be displayed on the calculator.</p>
+<h3>Example</h3>
+<pre><strong>Input:</strong>
+4
+
+1 + 1 * 2 =
+
+29 / 5 =
+
+103 * 103 * 5 =
+
+50 * 40 * 250 + 791 =
+
+<strong>Output:</strong>
+4
+5
+53045
+500791
+</pre>
+<h3>Hint</h3>
+<p>The first test case shows that there is no operator precedence.</p>
+<p>The second one shows that integer division always rounds down.</p>
+<p>The last two outputs are the answers to the two riddles in the
+problem statement: "shoes" (53045 upside down), and "igloos"(500791
+upside down).</p>
+
+<hr>
+<table style="margin-bottom: 10px;" class="probleminfo" align="left" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td>Added by:</td><td><a href="https://www.spoj.pl/users/john_jones">Blue Mary</a></td></tr>
+<tr><td>Date:</td><td>2009-05-31</td></tr>
+<tr><td>Time limit:</td><td>3s
+</td></tr>
+<tr><td>Source limit:</td><td>50000B</td></tr>
+<tr><td>Languages:</td><td>All except: C99 strict </td></tr>
+<tr><td>Resource:</td><td>IPSC 2009</td></tr>
+	
+</tbody></table>
+	<div id="ccontent">
+	
+<hr style="clear: both;">
+
+<a id="comments"></a>
+<table id="comments_table" width="100%">
+	
+</table>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script>
+
+
+	</div>
+	<table width="100%">
+                <tbody><tr>
+                <td colspan="2" height="20"></td>
+        </tr>
+        <form method="post" action="/comment/ARITH2/add/"></form>
+        <tr> <td style="padding-left: 5px;" colspan="2">Leave a Comment</td> </tr>
+        <tr>
+                <td valign="top"></td>
+                <td><textarea name="content" cols="40" rows="3"></textarea></td>
+        </tr>
+                <tr>
+                <td colspan="2" style="padding-left: 5px;">
+                        <input value="Publish" type="submit">
+                        <input name="pcode" value="ARITH2" type="hidden">
+                </td>
+        </tr>
+<tr>
+<td colspan="2" class="smallgrey" style="padding-left: 5px;">
+Notes:
+<br>1. Don't post any source code here.
+<br>2. Please be careful, leave short comments only. Don't spam here.
+<br>3. For more discussion (hints, ideas, solutions) please visit our <a href="https://www.spoj.pl/forum">forum</a>.
+<br>4. Authors are allowed to delete the post and use html code here (e.g. to provide some useful links).
+</td>
+</tr>
+        
+        </tbody></table>
+
+	</div>
+        </td>
+</tr><tr>
+        <td style="padding: 0px;" colspan="2"><center>
+                
+</center></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="footer">
+
+<script language="javascript" type="text/javascript">
+<!--
+function swapSheet(sheet, caller) {
+    document.getElementById('theme').href=sheet;
+    document.cookie="css_0="+sheet+"; path=/;";
+    caller.href="#bottom";
+}
+
+function setWidth(w, caller) {
+    document.getElementById('maintable').style.width=w;
+    document.cookie="res="+w+"; path=/;";
+    caller.href="#bottom";
+}
+//-->
+
+</script>
+        <table width="100%">
+    <tbody><tr>
+	<td class="cfooter" align="left" width="10%">
+	<a href="https://www.spoj.pl/info/">About SPOJ</a>
+	</td>
+	<td class="cfooter" align="center">
+	    page size:
+	    <a href="https://www.spoj.pl/?rsl=755px" onclick="setWidth('755px', this)">800x600</a>
+	    <a href="https://www.spoj.pl/?rsl=980px" onclick="setWidth('980px', this)">1024x768</a>
+	    <a href="https://www.spoj.pl/?rsl=100%" onclick="setWidth('100%', this)">Full</a>
+	    &nbsp;&nbsp;
+	    theme:
+	    <a href="https://www.spoj.pl/?css=/themes/skin1.css" onclick="swapSheet('/themes/skin1.css', this)">olive</a>
+	    <a href="https://www.spoj.pl/?css=/themes/skin2.css" onclick="swapSheet('/themes/skin2.css', this)">banana</a>
+	    <a href="https://www.spoj.pl/?css=/themes/skin3.css" onclick="swapSheet('/themes/skin3.css', this)">plum</a>
+	</td>
+		<td class="cfooter" align="center">
+		 <span title="The discussion channel of the Sphere Online Judge community.">
+		 <a href="irc://irc.freenode.net/spoj"><b>#spoj</b> at freenode</a>
+		 </span>
+	</td>
+		<td class="cfooter" style="text-align: right;" width="10%">
+		<a href="https://www.spoj.pl/rss/"><img src="spoj-04452_files/rss10x10.gif" border="0">&nbsp;RSS</a>&nbsp;
+	
+	</td>
+    </tr>
+    </tbody></table>
+    </td></tr></tbody></table>
+</center>
+<div style="font-size: 10px; margin-top: 4px; color: rgb(85, 80, 95);"><center>
+<a href="http://www.spoj.pl/" style="color: black;">SPOJ</a>
+System &#169; 2008-2009
+<a href="http://sphere-research.com/" style="color: black;">Sphere Research Labs</a>. 
+All Rights Reserved.</center></div>
+</body></html>
