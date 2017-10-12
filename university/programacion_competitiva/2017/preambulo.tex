@@ -1,0 +1,131 @@
+\documentclass[12pt,a4paper,twoside]{report}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{graphicx, subfigure}
+\usepackage[english,activeacute]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm,top=3.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{sectsty}\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont}
+\setcounter{secnumdepth}{5}
+\usepackage{ccaption}
+\usepackage[normalem]{ulem}
+   \captionnamefont{\bfseries\small}
+   \captiontitlefont{\small}
+   \captiondelim{\hspace{1em}}
+   \hangcaption
+\usepackage{multirow}
+\usepackage{longtable,ltcaption}
+%\usepackage{pdfpages} % to import PDF pages
+
+\usepackage{relsize}
+\usepackage{xcolor,colortbl}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[ruled]{algorithm2e}
+
+\usepackage{color}
+%\usepackage[ruled,linesnumbered,portugues]{algorithm2e}
+
+\usepackage{listings}
+\definecolor{backgroundcode}{rgb}{0.95,0.95,0.95}
+
+
+%referencias de la pagina
+\usepackage{hyperref}
+
+\newcommand{\numguia}{9}
+
+%\newcommand{\nombreguia}{Introducción}
+%\newcommand{\nombreguia}{STL I}
+%\newcommand{\nombreguia}{STL II}
+%\newcommand{\nombreguia}{Complejidad}
+%\newcommand{\nombreguia}{Backtracking}
+%\newcommand{\nombreguia}{Grafos I}
+%\newcommand{\nombreguia}{Grafos II}
+%\newcommand{\nombreguia}{Grafos III}
+\newcommand{\nombreguia}{Programación Dinámica}
+%\newcommand{\nombreguia}{}
+
+
+%% propiedades del pdf
+\hypersetup{
+    pdfstartview={FitH},  
+    pdftitle={Gu\'ia pr\'actica \numguia -- \nombreguia -- \the\year},
+    pdfauthor={David N. Campo - Daniel Ambort},     
+    pdfsubject={Gu\'ia pr\'actica \numguia - Programaci\'on Competitiva \the\year},
+    pdfcreator={David N. Campo},   
+    pdfproducer={David N. Campo}, 
+    pdfkeywords={algorithms, c++, acm icpc, UVa, SPOJ, URI, programming}, 
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue,
+}
+
+% Estilo de página %%%%%%%%%%%%%%%%%%%%
+\fancyhead{}
+\fancyhead[LO,RE]{\vfill{\footnotesize Programaci\'on Competitiva $\the\year$ - Gu\'ia pr\'actica $\numguia$ -- \nombreguia}}
+\fancyhead[RO,LE]{\includegraphics[scale=0.15]{../img/logo_UTN_color.pdf}}
+
+\fancyfoot{}
+\fancyfoot[RO]{\hfill\includegraphics[scale=0.9]{../img/footlineR.pdf}\newline\footnotesize Página \textbf{\thepage}}
+\fancyfoot[LE]{\includegraphics[scale=0.9]{img/footlineL.pdf}\newline\footnotesize Página \textbf{\thepage}}
+
+\pagestyle{fancy}
+\fancypagestyle{plain}{
+   \fancyhead{}
+	\fancyhead[LO,RE]{\vfill{\footnotesize Programaci\'on Competitiva $\the\year$ - Gu\'ia pr\'actica $\numguia$ -- \nombreguia}}
+   \fancyhead[RO,LE]{\includegraphics[scale=0.15]{../img/logo_UTN_color.pdf}}
+}   
+
+\newpage\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C++,                 % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=true,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
