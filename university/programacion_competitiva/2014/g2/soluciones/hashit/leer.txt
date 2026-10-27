@@ -1,0 +1,2 @@
+spoj-00029_m.cpp -> versión con map
+spoj-00029_v.cpp -> versión con vector
